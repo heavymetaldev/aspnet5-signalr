@@ -1,0 +1,10 @@
+{
+    "projects": [
+        "src"
+    ],
+    "sdk": {
+        "runtime": "clr",
+        "version": "1.0.0-rc1-update1",
+        "architecture": "x64"
+    }
+}
