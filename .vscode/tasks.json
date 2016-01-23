@@ -1,0 +1,19 @@
+{
+	"version": "0.1.0",
+	"command": "dnu",
+    "isShellCommand": true,
+	"args": [
+ 	],
+	"taskSelector": "",
+	"showOutput": "always",
+    "options": {
+        "cwd":  "src/Sample.SignalR"
+    },
+	"tasks": [
+		{
+			"taskName": "build",
+			"showOutput": "silent",
+			"problemMatcher": "$msCompile"
+		}
+	]
+}

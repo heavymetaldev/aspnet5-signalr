@@ -28,6 +28,9 @@ namespace Sample.SignalR
         {
             // Add framework services.
             services.AddMvc();
+            services.AddSignalR(opts => {
+                
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +58,8 @@ namespace Sample.SignalR
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            
+            app.UseSignalR();
         }
 
         // Entry point for the application.
