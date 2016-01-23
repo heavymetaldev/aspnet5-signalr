@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -50,6 +51,10 @@ namespace Sample.SignalR
 
             app.UseIISPlatformHandler();
 
+            app.UseDefaultFiles(new DefaultFilesOptions() {
+                DefaultFileNames = new [] { "chat.html" }
+            });
+            
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
